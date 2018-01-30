@@ -1,8 +1,8 @@
 language: node_js
 before_script:
-    -"npm install -g se-interpreter"
+    - "npm install -g se-interpreter"
 script:
-    -"se-interpreter SampleRepo/interpreter_config.json"
+    - "se-interpreter SampleRepo/interpreter_config.json"
 env:
     global:
         - slab_username=dhkhurana
