@@ -1,0 +1,25 @@
+{
+  "type": "interpreter-config",
+  "configurations": [
+    {
+      "settings": [
+        {
+			"driverOptions":{
+				"host": "ondemand.saucelabs.com",
+				"port": 80
+			},
+          "browserOptions": {
+            "browserName": "firefox",
+			"username": "${slab_username}",
+			"password": "${slab_pwd}"
+			
+          }
+        }
+      ],
+      "scripts": [
+        "box/*",
+        "custom/textcheck.json"
+      ]
+    }
+  ]
+}

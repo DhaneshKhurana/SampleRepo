@@ -1,0 +1,90 @@
+{
+  "type": "script",
+  "seleniumVersion": "2",
+  "formatVersion": 2,
+  "steps": [
+    {
+      "type": "get",
+      "url": "https://www.box.com/"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "link text",
+        "value": "Log in"
+      }
+    },
+    {
+      "type": "storeElementAttribute",
+      "locator": {
+        "type": "css selector",
+        "value": "input.inp-full-width"
+      },
+      "attributeName": "placeholder",
+      "variable": "eph"
+    },
+    {
+      "type": "verifyElementAttribute",
+      "locator": {
+        "type": "name",
+        "value": "login"
+      },
+      "attributeName": "placeholder",
+      "value": "${eph}"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "name",
+        "value": "login"
+      },
+      "text": "${email}"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "xpath",
+        "value": "//div[@class='form-buttons']//button[.=' Next']"
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "link text",
+        "value": "Not you?"
+      }
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "Email"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "name",
+        "value": "login"
+      },
+      "text": "dhaneshkhurana"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "xpath",
+        "value": "//div[@class='form-buttons']//button[.=' Next']"
+      }
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "Password"
+    }
+  ],
+  "data": {
+    "configs": {
+      "manual": {
+        "email": "ghi"
+      }
+    },
+    "source": "manual"
+  },
+  "inputs": []
+}
