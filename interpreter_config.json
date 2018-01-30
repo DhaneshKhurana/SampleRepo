@@ -17,7 +17,7 @@
         }
       ],
       "scripts": [
-        "box/*",
+        "SampleRepo/box/*",
         "custom/textcheck.json"
       ]
     }
